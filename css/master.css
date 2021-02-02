@@ -1,0 +1,146 @@
+/* regole generali */
+body {
+  font-size: 12px;
+}
+
+.container_small {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+/* inizio header */
+/* inizio menu fisso */
+#fixed_header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  height: 80px;
+  line-height: 80px;
+}
+
+#fixed_header i {
+  display: none;
+}
+
+.horizontal_list{
+  list-style: none;
+  text-transform: uppercase;
+}
+.horizontal_list li {
+  display: inline;
+  margin: 10px;
+}
+.horizontal_list li a {
+  text-decoration: none;
+  color: black;
+}
+.horizontal_list .border_ita {
+  margin: 0;
+  padding: 0 10px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+/* fine menu fisso */
+/* inizio jumbotron */
+#jumbotron {
+  /* position: relative; */
+  margin: 80px 0 60px;
+  background-image: url(../img/hero-bg.jpg);
+  background-size: cover;
+  background-position: bottom;
+  height: 555px;
+}
+.text_jumbotron {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  position: relative;
+  top: 222px;
+  color: white;
+  line-height: 45px;
+  text-align: center;
+}
+.text_jumbotron h1 {
+  font-size: 4em;
+}
+/* fine jumbotron */
+/* fine header */
+/* inizio main */
+/* inizio scooter */
+.monopattini {
+  margin-bottom: 60px;
+}
+.scooter {
+  text-align: center;
+  padding: 45px;
+  background-color: #fafafa;
+  line-height: 30px;
+}
+.scooter.left {
+  border-right: 10px solid white;
+}
+.scooter.right {
+  border-left: 10px solid white;
+}
+.h2_scooter h2 {
+  display: inline;
+}
+.scooter a {
+  display: block;
+}
+.scooter img {
+  width: 135px;
+  height: 230px;
+  margin-top: 20px;
+}
+/* regole responsive smartphone e tablet */
+@media screen and (max-width:992px) {
+  /* inizio header */
+  /* inizio menu fisso */
+  #fixed_header {
+    padding: 0 30px;
+  }
+  #fixed_header .col-lg-8 { /*disattivo il menu quando entro in modalita smartphone/tablet */
+    display: none;
+  }
+
+  #fixed_header i {
+    display: inline-block;
+    float: right;
+    font-size: 30px;
+    line-height: 80px;
+  }
+/* fine menu fisso */
+/* scooter */
+  .monopattini {
+    margin-bottom: 0;
+  }
+  .scooter.left {
+    margin-bottom: 20px;
+  }
+}
+/* responsive tablet */
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  /* jumbotron */
+  .text_jumbotron img {
+    width: 230px;
+    height: 100px;
+  }
+}
+/* responsive smartphone */
+@media screen and (max-width:767px) {
+  /* scooter */
+  .scooter.left,
+  .scooter.right {
+    border: none;
+  }
+}
