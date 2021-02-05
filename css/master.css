@@ -19,13 +19,17 @@ h2 {
 /* inizio header */
 /* inizio menu fisso */
 #fixed_header {
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 999;
   height: 80px;
   line-height: 80px;
+  background-color: white;
 }
-
+#fixed_header img {
+  vertical-align: middle;
+}
 #fixed_header i {
   display: none;
 }
@@ -42,6 +46,9 @@ h2 {
   text-decoration: none;
   color: black;
 }
+.horizontal_list.text_right {
+  text-align: right;
+}
 .horizontal_list .border_ita {
   margin: 0;
   padding: 0 10px;
@@ -51,26 +58,27 @@ h2 {
 /* fine menu fisso */
 /* inizio jumbotron */
 #jumbotron {
-  /* position: relative; */
+  position: relative;
   margin: 80px 0 60px;
   background-image: url(../img/hero-bg.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   height: 555px;
 }
 .text_jumbotron {
-  /* position: absolute;
+  width: 100%;
+   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); */
-  position: relative;
-  top: 222px;
+  transform: translate(-50%, -50%);
   color: white;
-  line-height: 45px;
   text-align: center;
 }
 .text_jumbotron h1 {
   font-size: 4em;
+}
+.text_jumbotron p {
+  padding: 20px 0;
 }
 /* fine jumbotron */
 /* fine header */
@@ -80,27 +88,44 @@ h2 {
   margin-bottom: 60px;
 }
 .scooter {
+  margin: 0 10px;
+  padding: 30px 0;
   text-align: center;
   padding: 45px;
   background-color: #fafafa;
   line-height: 30px;
 }
-.scooter.left {
-  border-right: 10px solid white;
-}
-.scooter.right {
-  border-left: 10px solid white;
-}
-.h2_scooter h2 {
-  display: inline;
+.scooter .title_bike {
+  height: 20px;
 }
 .scooter a {
   display: block;
 }
-.scooter img {
+.scooter .bike {
   width: 135px;
   height: 230px;
   margin-top: 20px;
+}
+/* fine scooter */
+/* inizo old man */
+.banner {
+  background-image: url(../img/HelbizBanner.jpg);
+  height: 600px;
+  background-size: cover;
+  background-position: left;
+  text-align: center;
+}
+.text_banner {
+  margin-top: 725px;
+  text-align: left;
+}
+.text_banner h3 {
+  font-size: 2em;
+  text-align: center;
+}
+.img_iphone {
+  height: 600px;
+  margin-top: 278px;
 }
 /* regole responsive smartphone e tablet */
 @media screen and (max-width:992px) {
@@ -109,7 +134,7 @@ h2 {
   #fixed_header {
     padding: 0 30px;
   }
-  #fixed_header .col-lg-8 { /*disattivo il menu quando entro in modalita smartphone/tablet */
+  .xs_none { /*disattivo il menu quando entro in modalita smartphone/tablet */
     display: none;
   }
 
